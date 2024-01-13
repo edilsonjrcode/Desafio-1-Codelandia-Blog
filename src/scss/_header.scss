@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  width: 100%;
+  padding: 4rem 0rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5rem;
+  gap: 3rem;
+  background: $dark-20;
+
+  h1, span {
+    text-align: center;
+    font-family: 'Space Grotesk';
+    font-size: 2.5rem;
+    font-weight: 500;
+  }
+  h1 {
+    color: $brand-color;
+  }
+  span {
+    color: $white;
+  }
+
+  input {
+    @include flex(none, center, none);
+    width: 76rem;
+    padding: 1rem 1.5rem;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid $dark-40;
+    background: $dark-30;
+    color: $gray;
+    &:focus{
+      outline: 1px groove $brand-color;
+      box-shadow:$brand-color px 1px 1px;
+    }
+    &::placeholder{
+      color: $gray;
+      font-family: 'Inter';
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+
+  @include responsive(840px){
+    input{
+      width: 46rem;
+    }
+  }
+
+  @include responsive(540px){
+    height: 13.06rem;
+    padding: 3rem 1.5rem;
+    h1, span {
+      font-size: 1.5rem;
+    }
+    input{
+      width: 26rem;
+      height: 3.125rem;
+    }
+  }
+}
