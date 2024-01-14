@@ -151,7 +151,38 @@ header h1 {
 header span {
   color: #FFFFFF;
 }
-header input {
+header div.input-text {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: none;
+     -moz-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+  -webkit-box-pack: none;
+     -moz-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  position: relative;
+}
+header div.input-text img#icon-search {
+  position: absolute;
+  left: 15px;
+  top: 9px;
+  z-index: 2;
+  width: 2rem;
+  height: 2rem;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+header div.input-text input {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -170,51 +201,57 @@ header input {
      -moz-box-pack: none;
       -ms-flex-pack: none;
           justify-content: none;
+  z-index: 1;
   width: 76rem;
-  padding: 1rem 1.5rem;
+  padding: 1rem 0rem 1rem 4rem;
   align-items: center;
   border-radius: 0.5rem;
   border: 2px solid #252529;
   background: #202024;
   color: #AFABB6;
+  font-family: "Inter";
+  font-size: 1.25rem;
+  -webkit-transition: all 400ms;
+  -moz-transition: all 400ms;
+  transition: all 400ms;
 }
-header input:focus {
+header div.input-text input:focus {
   outline: 1px groove #E07B67;
   -webkit-box-shadow: #E07B67 px 1px 1px;
           box-shadow: #E07B67 px 1px 1px;
 }
-header input::-webkit-input-placeholder {
+header div.input-text input::-webkit-input-placeholder {
   color: #AFABB6;
   font-family: "Inter";
   font-size: 1.25rem;
   font-weight: 500;
 }
-header input::-moz-placeholder {
+header div.input-text input::-moz-placeholder {
   color: #AFABB6;
   font-family: "Inter";
   font-size: 1.25rem;
   font-weight: 500;
 }
-header input:-ms-input-placeholder {
+header div.input-text input:-ms-input-placeholder {
   color: #AFABB6;
   font-family: "Inter";
   font-size: 1.25rem;
   font-weight: 500;
 }
-header input::-ms-input-placeholder {
+header div.input-text input::-ms-input-placeholder {
   color: #AFABB6;
   font-family: "Inter";
   font-size: 1.25rem;
   font-weight: 500;
 }
-header input::placeholder {
+header div.input-text input::placeholder {
   color: #AFABB6;
   font-family: "Inter";
   font-size: 1.25rem;
   font-weight: 500;
 }
 @media (max-width: 840px) {
-  header input {
+  header div.input-text {
     width: 46rem;
   }
 }
@@ -226,8 +263,11 @@ header input::placeholder {
   header h1, header span {
     font-size: 1.5rem;
   }
-  header input {
+  header div.input-text {
     width: 26rem;
     height: 3.125rem;
+  }
+  header div.input-text img#icon-search {
+    top: 5px;
   }
 }

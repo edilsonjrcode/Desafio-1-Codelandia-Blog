@@ -22,29 +22,49 @@ header {
     color: $white;
   }
 
-  input {
-    @include flex(none, center, none);
-    width: 76rem;
-    padding: 1rem 1.5rem;
-    align-items: center;
-    border-radius: 0.5rem;
-    border: 2px solid $dark-40;
-    background: $dark-30;
-    color: $gray;
-    &:focus{
-      outline: 1px groove $brand-color;
-      box-shadow:$brand-color px 1px 1px;
+  div.input-text {
+    @include flex(row, none, none);
+    position: relative;
+
+
+    img#icon-search {
+      position: absolute;
+      left: 15px;
+      top: 9px;
+      z-index: 2;
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
     }
-    &::placeholder{
+
+    input {
+      @include flex(none, center, none);
+      z-index: 1;
+      width: 76rem;
+      padding: 1rem 0rem 1rem 4rem;
+      align-items: center;
+      border-radius: 0.5rem;
+      border: 2px solid $dark-40;
+      background: $dark-30;
       color: $gray;
       font-family: 'Inter';
       font-size: 1.25rem;
-      font-weight: 500;
+      transition: all 400ms;
+      &:focus{
+        outline: 1px groove $brand-color;
+        box-shadow:$brand-color px 1px 1px;
+      }
+      &::placeholder{
+        color: $gray;
+        font-family: 'Inter';
+        font-size: 1.25rem;
+        font-weight: 500;
+      }
     }
   }
 
   @include responsive(840px){
-    input{
+    div.input-text{
       width: 46rem;
     }
   }
@@ -55,9 +75,15 @@ header {
     h1, span {
       font-size: 1.5rem;
     }
-    input{
+    div.input-text{
       width: 26rem;
       height: 3.125rem;
+      img#icon-search {
+        top: 5px;
+      }
     }
+
+
+
   }
 }
