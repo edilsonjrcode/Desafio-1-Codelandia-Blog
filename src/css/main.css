@@ -43,10 +43,16 @@ button {
   background: #17171A;
   color: #FFFFFF;
   margin-bottom: 2.5rem;
+  -webkit-transition: border 500ms;
+  -moz-transition: border 500ms;
+  transition: border 500ms;
   cursor: pointer;
 }
 .card-information:hover {
   border-color: #E07B67;
+}
+.card-information img {
+  width: 2rem;
 }
 .card-information div.informations {
   display: -webkit-box;
@@ -91,6 +97,37 @@ button {
   color: #AFABB6;
   font-size: 1.25rem;
   line-height: 160%;
+}
+@media (max-width: 840px) {
+  .card-information {
+    width: 87%;
+  }
+  .card-information img {
+    width: 1.5rem;
+  }
+  .card-information div.informations span {
+    font-size: 0.875rem;
+  }
+  .card-information div.informations h2 {
+    font-size: 1.25rem;
+  }
+  .card-information div.informations p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 840px) and (max-width: 540px) {
+  .card-information img {
+    width: 1.25rem;
+  }
+  .card-information div.informations span {
+    font-size: 0.75rem;
+  }
+  .card-information div.informations h2 {
+    font-size: 1.25rem;
+  }
+  .card-information div.informations p {
+    font-size: 0.875rem;
+  }
 }
 
 .container {
@@ -144,6 +181,7 @@ header h1, header span {
   font-family: "Space Grotesk";
   font-size: 2.5rem;
   font-weight: 500;
+  cursor: pointer;
 }
 header h1 {
   color: #E07B67;
