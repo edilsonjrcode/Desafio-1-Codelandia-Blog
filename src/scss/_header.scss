@@ -27,7 +27,6 @@ header {
     @include flex(row, none, none);
     position: relative;
 
-
     img#icon-search {
       position: absolute;
       left: 15px;
@@ -65,12 +64,15 @@ header {
   }
 
   @include responsive(840px){
+    margin-bottom: 3rem;
+
     div.input-text{
       width: 46rem;
     }
   }
 
   @include responsive(540px){
+    margin-bottom: 2.5rem;
     height: 13.06rem;
     padding: 3rem 1.5rem;
     h1, span {
@@ -83,8 +85,5 @@ header {
         top: 5px;
       }
     }
-
-
-
   }
 }

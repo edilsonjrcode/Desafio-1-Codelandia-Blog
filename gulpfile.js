@@ -13,7 +13,7 @@ const sass = gulpSass(dartSass);
 function compilaSass() {
   return gulp
     .src("src/scss/*.scss")
-    .pipe(sass(/*{outputStyle:'compressed'}*/))
+    .pipe(sass({outputStyle:'compressed'}))
     .pipe(
       autoPrefixer({
         overrideBrowserslist: [
@@ -41,7 +41,7 @@ function gulpJs(){
   .pipe(babel({
     presets: ['@babel/env']
   }))
-  //.pipe(GulpUglify())
+  .pipe(GulpUglify())
   .pipe(gulp.dest('src/js/'))
   .pipe(browserSync.stream())
 }
