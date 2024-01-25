@@ -20,7 +20,7 @@
   const searchBar = document.querySelector("#search-bar");
   const cards = document.querySelectorAll(".card-information");
 
-  searchBar.addEventListener("input", search);
+  // searchBar.addEventListener("input", search);
 
   const search = () => {
     for (let card of cards) {
@@ -28,7 +28,7 @@
       console.log(article);
       const title = article.querySelector("h2").textContent.toLowerCase();
       if (searchBar.value != "") {
-        if (title.includes(searchBar.value)) {
+        if (title.includes(searchBar.value.toLowerCase())) {
           card.style.display = "flex";
         } else {
           card.style.display = "none";
