@@ -20,8 +20,6 @@
   const searchBar = document.querySelector("#search-bar");
   const cards = document.querySelectorAll(".card-information");
 
-  // searchBar.addEventListener("input", search);
-
   const search = () => {
     for (let card of cards) {
       const article = card.querySelector(".informations");
